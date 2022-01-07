@@ -12,14 +12,17 @@ import { catchError, map, startWith } from 'rxjs/operators';
 export class EmployeesComponent implements OnInit {
 
   panelNum:any=1;
-  products$:Observable<AppDataState<Employe[]>> |null=null
+  employes$:Observable<AppDataState<Employe[]>> |null=null
   readonly DataStateEnum= DataStateEnum;
   constructor( private employeService:EmployeService) { }
 
 
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+      
+    this.getAllEmployes();
+                      }
+
 
   displayStyle = "none";
   openPopup() {
@@ -46,7 +49,7 @@ next() {
 
 //get all employees
  getAllEmployes(){
-  this.products$=this.employeService.getAllEmployes().pipe(
+  this.employes$=this.employeService.getAllEmployes().pipe(
       map(data=>({dataState:DataStateEnum.LOADED, data:data})),
       startWith({dataState:DataStateEnum.LOADING}),
       catchError(err=>of({dataState:DataStateEnum.ERROR,errorMessage:err.message}))
@@ -56,7 +59,7 @@ next() {
 
 //search Employees
 onSearch(dataForm:any){
-  this.products$=this.employeService.searchEmployes(dataForm.keyword).pipe(
+  this.employes$=this.employeService.searchEmployes(dataForm.keyword).pipe(
     map(data=>({dataState:DataStateEnum.LOADED, data:data})),
     startWith({dataState:DataStateEnum.LOADING}),
     catchError(err=>of({dataState:DataStateEnum.ERROR,errorMessage:err.message}))
@@ -67,6 +70,17 @@ onSearch(dataForm:any){
 
 
 
+//delete employer
+onDelete(employe:Employe){
+  var c =confirm("Etes vous sur de vouloir supprimer?")
+  if(c==true)
+  this.employeService.deleteEmploye(employe).subscribe(
+    data=>{
+      this.getAllEmployes();
+    }
+  )
+
+}
 
 
 
@@ -75,20 +89,7 @@ onSearch(dataForm:any){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
- submit(){
+ getNewEmploye(){
 
  }
 

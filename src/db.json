@@ -1,0 +1,71 @@
+{
+    "employes": [
+      {
+        
+      "id":1,
+      "name":"joel",
+      "port":"152",
+      "work_site":"joel texte",
+      "active_from":"supprimer ",
+      "active_trought":"active ",
+      "employe_id_code":"dfd4545454",
+      "work_location":"douala",
+      "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia accusantium magni quam hic vero, dolore, incidunt alias facilis adipisci iusto officiis eaque velit repudiandae animi perspiciatis vitae voluptates cum sit.",
+      "employe_skill":"lorem lorem",
+      "additional_skill":"add deqtq",
+      "position":" bp 257",
+      "shift_time":"2000",
+      "meal_times":"55500",
+      "rdos":"021532",
+      "stragger_rdos":"45221212",
+      "selected":true
+      },
+      {
+        
+        "id":2,
+        "name":"placide",
+        "port":"152",
+        "work_site":"placide texte",
+        "active_from":"supprimer ",
+        "active_trought":"active ",
+        "employe_id_code":"dfd4545454",
+        "work_location":"douala",
+        "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia accusantium magni quam hic vero, dolore, incidunt alias facilis adipisci iusto officiis eaque velit repudiandae animi perspiciatis vitae voluptates cum sit.",
+        "employe_skill":"lorem lorem",
+        "additional_skill":"add deqtq",
+        "position":" bp 257",
+        "shift_time":"2000",
+        "meal_times":"55500",
+        "rdos":"021532",
+        "stragger_rdos":"1dff212",
+        "selected":true
+        },
+        {
+          
+          "id":3,
+          "name":"hermann",
+          "port":"152",
+          "work_site":"hermann texte",
+          "active_from":"supprimer ",
+          "active_trought":"active ",
+          "employe_id_code":"dfd4545454",
+          "work_location":"douala",
+          "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia accusantium magni quam hic vero, dolore, incidunt alias facilis adipisci iusto officiis eaque velit repudiandae animi perspiciatis vitae voluptates cum sit.",
+          "employe_skill":"lorem lorem",
+          "additional_skill":"add deqtq",
+          "position":" bp 257",
+          "shift_time":"204500",
+          "meal_times":"550",
+          "rdos":"02153dfgf2",
+          "stragger_rdos":"1dff212",
+          "selected":true
+          }
+  
+
+
+
+
+
+    ]
+  }
+  
