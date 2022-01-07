@@ -296,14 +296,16 @@
                      <br>
                      <select class="form-control"> 
                          <option value="">All</option>
-                         <option value="">2Lorem ipsum</option>
+                         <option value="">2Lorem ifsum</option>
                          <option value="">3Lorem ipsum</option>
                      </select>
                  </div>
                  <div class="col"></div>
                  <div class="col"></div>
                 </div> 
-              <table class="table align-items-center table-flush">
+              <table class="table align-items-center table-flush" *ngIf="employes$ | async as result" [ngSwitch]="result.dataState">
+              <ng-container *ngSwitchCase="DataStateEnum.LOADED">
+
               
                 <thead class="thead-light">
                   <tr >
@@ -315,13 +317,13 @@
                     <td scope="col"></td>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
+                <tbody  >
+                  <tr *ngFor="let e of result.data">
                     <th scope="row">
                       <div class="media align-items-center">
                     
                         <div class="media-body">
-                          <span class="mb-0 text-sm">Vue Paper UI Kit PRO</span>
+                          <span class="mb-0 text-sm"> ghgghh</span>
                         </div>
                       </div>
                     </th>
@@ -360,6 +362,8 @@
                     </td>
                   </tr>
                 </tbody>
+
+              </ng-container>
               </table>
             </div>
            </div>
